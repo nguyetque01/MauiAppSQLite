@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppSQLite.PeoplePage"
+             Title="People">
+    <StackLayout Padding="20">
+        <Entry x:Name="EntryName" Placeholder="Enter name" />
+        <Button Text="Add Person" Clicked="OnAddPersonClicked" />
+        <Label x:Name="StatusLabel" />
+        <FlexLayout Direction="Row" JustifyContent="SpaceBetween" Margin="0,0,10,0">
+            <Button Text="Get All People" Clicked="OnGetAllPeopleClicked" />
+            <Button Text="Sort" Clicked="OnSortClicked" />
+            <Button Text="Delete All" Clicked="OnDeleteAllClicked" />
+        </FlexLayout>
+        <ListView x:Name="PeopleListView" SeparatorVisibility="None">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell>
+                        <FlexLayout Direction="Row" JustifyContent="SpaceBetween" Margin="10,10,10,10" >
+                            <Label Text="{Binding ID}"  />
+                            <Label Text="{Binding Name}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" />
+                        </FlexLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -8,8 +8,8 @@
     Title="MauiAppSQLite">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="People"
+        ContentTemplate="{DataTemplate local:PeoplePage}"
+        Route="PeoplePage" />
 
 </Shell>

@@ -15,8 +15,11 @@ namespace MauiAppSQLite
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<PeoplePage>();
+            builder.Services.AddSingleton<PeopleDatabase>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
